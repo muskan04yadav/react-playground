@@ -15,10 +15,9 @@ jobs:
        run: docker build -t muskan04yadav/react-playground .
       -name: publish image to docker hub
        run: docker push muskan04yadav/react-playground:latest
-
   deploy: 
     needs: build
-    runs-on: [ubuntu]
+    runs-on: [ubuntu-latest]
     steps:
       -name: pull image from dockerhub
        run: docker pull muskan04yadav/react-playground:latest
