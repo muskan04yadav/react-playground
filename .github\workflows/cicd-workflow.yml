@@ -12,7 +12,7 @@ jobs:
       -name: login to docker hub
        run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD}}
       -name: Build docker image
-       run: docker built -t muskan04yadav/react-playground .
+       run: docker build -t muskan04yadav/react-playground .
       -name: publish image to docker hub
        run: docker push muskan04yadav/react-playground:latest
 
